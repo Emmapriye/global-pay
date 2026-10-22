@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Logo } from '@/components/brand/logo'
-import { Button } from '@/components/ui/button'
 
 export function CtaFooter() {
   return (
@@ -12,12 +11,13 @@ export function CtaFooter() {
             <h2 className="text-balance text-2xl font-semibold tracking-tight sm:text-3xl">Ready to take a look?</h2>
             <p className="text-pretty text-sm opacity-80">Create a demo account in seconds. No card, no bank, no real money.</p>
           </div>
-          <Button asChild size="lg" className="h-12 bg-charcoal px-6 text-base text-charcoal-foreground hover:bg-charcoal/90">
-            <Link href="/register">
-              Get started
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-          </Button>
+          <Link
+            href="/register"
+            className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-charcoal px-6 text-base font-medium text-charcoal-foreground transition-colors hover:bg-charcoal/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Get started
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
         </div>
 
         <div className="flex flex-col gap-6 border-t border-white/10 pt-8 text-sm text-charcoal-foreground/60 sm:flex-row sm:items-start sm:justify-between">

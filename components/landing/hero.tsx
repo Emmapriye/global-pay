@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowRight, ShieldCheck } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { HeroPreview } from './hero-preview'
 
 export function Hero() {
@@ -26,20 +25,19 @@ export function Hero() {
             fees and step-by-step transfer tracking feel — all with demo money.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="h-12 bg-brand px-6 text-base text-brand-foreground hover:bg-brand/90">
-              <Link href="/register">
-                Get started
-                <ArrowRight className="size-4" aria-hidden="true" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="h-12 border-white/20 bg-transparent px-6 text-base text-charcoal-foreground hover:bg-white/10 hover:text-charcoal-foreground"
+            <Link
+              href="/register"
+              className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-brand px-6 text-base font-medium text-brand-foreground transition-colors hover:bg-brand/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <Link href="/dashboard">Explore the demo dashboard</Link>
-            </Button>
+              Get started
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/dashboard"
+              className="inline-flex h-12 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-transparent px-6 text-base font-medium text-charcoal-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              Explore the demo dashboard
+            </Link>
           </div>
           <p className="flex items-center gap-2 text-xs text-charcoal-foreground/60">
             <ShieldCheck className="size-4 text-brand" aria-hidden="true" />

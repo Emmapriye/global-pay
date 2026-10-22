@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Logo } from '@/components/brand/logo'
-import { Button } from '@/components/ui/button'
 
 export function SiteHeader() {
   return (
@@ -19,12 +18,18 @@ export function SiteHeader() {
           </a>
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="ghost" size="sm" className="text-charcoal-foreground hover:bg-white/10 hover:text-charcoal-foreground">
-            <Link href="/login">Log in</Link>
-          </Button>
-          <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
-            <Link href="/register">Get started</Link>
-          </Button>
+          <Link
+            href="/login"
+            className="inline-flex h-7 items-center justify-center rounded-lg px-2.5 text-sm font-medium text-charcoal-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Log in
+          </Link>
+          <Link
+            href="/register"
+            className="inline-flex h-7 items-center justify-center rounded-lg bg-brand px-2.5 text-sm font-medium text-brand-foreground transition-colors hover:bg-brand/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
+            Get started
+          </Link>
         </div>
       </div>
     </header>
